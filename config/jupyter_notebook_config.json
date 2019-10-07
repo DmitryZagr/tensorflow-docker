@@ -1,0 +1,12 @@
+{
+  "NotebookApp": {
+
+    "password": "sha1:32961000dea5:9b2bd8236c5d279299f4952aac07512ecb6f7f9d",
+    "allow_password_change": false,
+
+    "port" : 8888,
+    "base_url" : "jupyter",
+    "ip" : "*"
+  }
+}
+

@@ -1,0 +1,11 @@
+password : 420af2063db7321db9935c5a30c6e71aa6b364fc6cf6aa67
+run from this dir :
+ - gpu support :
+
+docker run -d --restart=always --gpus all --memory=58g --cpus=7  -p 8888:8888  -v $(realpath data):/tf/notebooks-persistent -v $(realpath config/jupyter_notebook_config.json):/root/.jupyter/jupyter_notebook_config.json:ro tensorflow/tensorflow:2.0.0-gpu-py3-jupyter
+
+  -  without gpu support :
+
+docker run -d --restart=always --memory=58g --cpus=7  -p 8888:8888 -v $(realpath data):/tf/notebooks-persistent -v $(realpath config/jupyter_notebook_config.json):/root/.jupyter/jupyter_notebook_config.json:ro tensorflow/tensorflow:2.0.0-py3-jupyter
+
+config file : config/jupyter_notebook_config.json
