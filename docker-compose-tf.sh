@@ -10,9 +10,9 @@ then
     elif [ "$command" == "down" ]; then
         docker stop $container_name
         docker rm $container_name
-    elif [ "$command" == "up-basic" ]; then
+    elif [ "$command" == "up-nogpu" ]; then
         docker run -d  --name $container_name --restart=always --gpus all --memory=58g --cpus=7  -p 8888:8888  -v $(realpath data):/tf/notebooks-persistent -v $(realpath config/jupyter_notebook_config.json):/root/.jupyter/jupyter_notebook_config.json:ro tensorflow/tensorflow:2.0.0-py3-jupyter
-    elif [ "$command" == "down-basic" ]; then
+    elif [ "$command" == "down-nogpu" ]; then
         docker stop $container_name
         docker rm $container_name
     else
