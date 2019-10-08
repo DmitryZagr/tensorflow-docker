@@ -15,6 +15,8 @@ then
     elif [ "$command" == "down-basic" ]; then
         docker stop $container_name
         docker rm $container_name
+    else
+        echo "Unknown argument: \"$command\""
     fi
 else
     echo "No parameters found. "
