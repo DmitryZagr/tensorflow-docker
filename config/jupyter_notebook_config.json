@@ -5,7 +5,6 @@
     "allow_password_change": false,
 
     "port" : 8888,
-    "base_url" : "jupyter",
     "ip" : "*"
   }
 }
